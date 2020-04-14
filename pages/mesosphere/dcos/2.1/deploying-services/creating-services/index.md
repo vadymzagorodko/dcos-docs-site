@@ -37,6 +37,21 @@ You can deploy a simple program in an inline shell script. Let's start with a si
 
 When you define and launch a service, Marathon hands over execution to Mesos. Mesos creates a sandbox directory for each task. The sandbox directory is a directory on each agent node that acts as an execution environment and contains relevant log files. The `stderr` and `stdout` streams are also written to the sandbox directory.
 
+## CPU/Memory Requests and Limits
+
+Any application will require CPU and memory to execute. As you can see above, the `cpus` and `mem` fields can be used to specify the amount of these resources required by the application. These quantities are known as the CPU and memory "requests", and the app is guaranteed to have access to at least these amounts. In addition, DC/OS has the concept of CPU and memory "limits" which allow you to specify the maximum amount of the resource that the app may consume. The resource limit must be equal to or greater than the request; in addition, the limit may be given the value of "unlimited", meaning the app's use of that resource is not constrained at all. The app below has a CPU limit of 2.0 CPUs and an infinite memory limit:
+
+    ```json
+    {
+        "id": "basic-0",
+        "cmd": "while [ true ] ; do echo 'Hello Marathon' ; sleep 5 ; done",
+        "cpus": 1.0,
+        "mem": 256.0,
+        "resourceLimits" { "cpus": 2.0, "mem": "unlimited" },
+        "instances": 1
+    }
+    ```
+
 ## Declaring artifacts in applications
 
 To run any non-trivial application, you typically depend on a collection of artifacts: files or archives of files. To configure these artifacts, Marathon allows you to specify one or more URIs (uniform resource identifiers). URIs use the [Mesos fetcher](http://mesos.apache.org/documentation/latest/fetcher/) to do the legwork in terms of downloading (and potentially) extracting resources.
