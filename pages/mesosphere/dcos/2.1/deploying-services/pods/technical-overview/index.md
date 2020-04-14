@@ -71,6 +71,25 @@ PWD=/mnt/mesos/sandbox
 EP_HOST_HTTPENDPOINT=21528
 ```
 
+# Resource Requests and Limits
+
+Each container in a pod will require some resources to execute. The `resources` field contains an object with fields specifying the quantities of various resources required by the container. These quantities are known as the resource "requests", and the container is guaranteed to have access to at least these amounts of each resource. In addition, DC/OS has the concept of CPU and memory "limits" which allow you to specify the maximum amount of CPU or memory that the app may consume. The resource limit must be equal to or greater than the request; in addition, the limit may be given the value of "unlimited", meaning the app's use of that resource is not constrained at all. The app below has an infinite CPU limit and a memory limit of 4096 MB:
+
+```json
+{
+     "resources": {
+         "cpus": 2,
+         "mem": 1024,
+         "disk": 10240,
+         "gpus": 2
+     },
+     "resourceLimits": {
+         "cpus": "unlimited",
+         "mem": 4096
+     }
+}
+```
+
 ## Executor Resources
 
 The executor runs on each node to manage the pods. By default, the executor reserves 32 MB and .1 CPUs per pod for overhead. Take this overhead into account when declaring resource needs for the containers in your pod. You can modify the executor resources in the `executorResources` field of your pod definition.
