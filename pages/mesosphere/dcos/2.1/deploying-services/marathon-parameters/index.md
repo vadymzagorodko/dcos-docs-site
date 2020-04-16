@@ -5,6 +5,7 @@ title: Marathon Configuration Reference
 menuWeight: 0
 excerpt: Understanding Marathon application definitions
 render: mustache
+beta: true
 model: /mesosphere/dcos/2.1/data.yml
 enterprise: false
 ---
