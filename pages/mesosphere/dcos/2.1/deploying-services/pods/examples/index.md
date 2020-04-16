@@ -5,6 +5,7 @@ title: Pod Examples
 menuWeight: 30
 excerpt: Understanding field definitions and examples of pods
 render: mustache
+beta: true
 model: /mesosphere/dcos/2.1/data.yml
 enterprise: false
 ---
