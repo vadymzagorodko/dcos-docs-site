@@ -28,6 +28,12 @@ To deploy an addon, select a Project from your Workspace and select the **View C
 
 To customize an addon before deploying it, you can customize the helm chart values or KUDO parameters of a service before deploying it.
 
-![Deploy Platform Service](/ksphere/kommander/img/project-catalog-deploy.png)
+For helm-based addons, you can specify the helm chart values in a YAML editor:
+
+![Deploy Helm Platform Service](/ksphere/kommander/img/project-catalog-deploy.png)
+
+For KUDO-based addons, you can fill out the form fields corresponding to the specific properties that are supported by that addon's parameters schema:
+
+![Deploy KUDO Platform Service](/ksphere/kommander/img/project-catalog-deploy-kudo.png)
 
 After an addon is deployed in a project, the service is installed to all clusters in that project.
