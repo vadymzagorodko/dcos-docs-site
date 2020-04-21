@@ -28,7 +28,7 @@ To deploy an addon, select a Project from your Workspace and select the **View C
 
 To customize an addon before deploying it, you can customize the helm chart values or KUDO parameters of a service before deploying it.
 
-For helm-based addons, you can specify the helm chart values in a YAML editor:
+For Helm-based addons, specify the chart values in a YAML editor:
 
 ![Deploy Helm Platform Service](/ksphere/kommander/img/project-catalog-deploy.png)
 
