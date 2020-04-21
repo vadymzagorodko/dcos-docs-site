@@ -32,7 +32,7 @@ For Helm-based addons, specify the chart values in a YAML editor:
 
 ![Deploy Helm Platform Service](/ksphere/kommander/img/project-catalog-deploy.png)
 
-For KUDO-based addons, you can fill out the form fields corresponding to the specific properties that are supported by that addon's parameters schema:
+For KUDO-based addons, fill out the form fields supported by that addon's parameters schema:
 
 ![Deploy KUDO Platform Service](/ksphere/kommander/img/project-catalog-deploy-kudo.png)
 
