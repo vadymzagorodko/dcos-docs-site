@@ -34,6 +34,7 @@ deploy and manage Kubernetes clusters
 * [konvoy diagnose](./konvoy-diagnose/)	 - Creates a diagnostics bundle of the cluster
 * [konvoy down](./konvoy-down/)	 - Destroy the Kubernetes cluster
 * [konvoy drain](./konvoy-drain/)	 - Drains Pods from machines managed by konvoy
+* [konvoy fetch](./konvoy-fetch/)	 - Run fetch cluster state
 * [konvoy generate](./konvoy-generate/)	 - Generates artifacts
 * [konvoy get](./konvoy-get/)	 - Get cluster related information
 * [konvoy image](./konvoy-image/)	 - Run Konvoy CLI images related actions
@@ -43,5 +44,6 @@ deploy and manage Kubernetes clusters
 * [konvoy scale](./konvoy-scale/)	 - Changes the node pool's number of machines in the cluster configuration
 * [konvoy uncordon](./konvoy-uncordon/)	 - Marks nodes in the node pool as schedulable
 * [konvoy up](./konvoy-up/)	 - Run provision, and deploy (kubernetes, container-networking, and addons) to create or update a Kubernetes cluster reflecting the provided configuration and inventory files
+* [konvoy upload](./konvoy-upload/)	 - Run upload cluster state
 * [konvoy view](./konvoy-view/)	 - Views various artifacts
 

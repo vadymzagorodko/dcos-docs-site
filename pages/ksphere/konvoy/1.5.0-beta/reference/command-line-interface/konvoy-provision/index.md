@@ -28,6 +28,7 @@ konvoy provision [cluster name] [flags]
   -h, --help                          help for provision
       --plan-only                     show planned changes but don't provision
       --provisioner string            select a provisoner [aws|azure|gcp|docker|none] (default "aws")
+      --skip-state-upload             skip the upload of the state to Kubernetes cluster
       --verbose                       enable debug level logging
   -y, --yes                           run command without prompting
 ```
@@ -35,4 +36,3 @@ konvoy provision [cluster name] [flags]
 ### SEE ALSO
 
 * [konvoy](../)	 - deploy and manage Kubernetes clusters
-

@@ -29,6 +29,7 @@ konvoy up [flags]
   -h, --help                          help for up
       --max-parallel-nodes string     set the number of nodes to upgrade in parallel. This can be an integer or a percentage of a nodePool. Set to 1 to run serially (requires --upgrade or --force-upgrade flag) (default "15%")
       --provisioner string            select a provisoner [aws|azure|gcp|docker|none] (default "aws")
+      --skip-state-upload             skip the upload of the state to Kubernetes cluster
       --upgrade                       run an upgrade on all nodes requiring an upgrade
       --verbose                       enable debug level logging
       --without-draining              run an upgrade on all nodes requiring an upgrade, without draining the nodes first (requires --upgrade or --force-upgrade flag) (WARNING! usage can result in undefined behavior and service downtime)
@@ -38,4 +39,3 @@ konvoy up [flags]
 ### SEE ALSO
 
 * [konvoy](../)	 - deploy and manage Kubernetes clusters
-
